@@ -13,8 +13,8 @@ namespace YouNotAlone
 
     public partial class MainPage : ContentPage
     {
-        //tcp://0.tcp.ngrok.io:18706
-        const int port = 12951;
+        //0.tcp.ngrok.io:15407
+        const int port = 15407;
         const string address = "0.tcp.ngrok.io";
 
         
@@ -25,6 +25,16 @@ namespace YouNotAlone
         {
             InitializeComponent();
 
+            categories.Add(new Category { id = 1, Name = "One1" });
+            categories.Add(new Category { id = 2, Name = "Two2" });
+
+            ListPanel.ItemsSource = categories;
+
+            //GetConnect();
+        }
+
+        async Task GetConnect()
+        {
             TcpClient client = null;
 
             client = new TcpClient(address, port);
@@ -39,13 +49,7 @@ namespace YouNotAlone
             {
                 if (stream.DataAvailable)
                 {
-                    //Console.WriteLine("Сервер говорит!");
                     categories = (List<Category>)formatter.Deserialize(stream);
-                    //Console.WriteLine("Категории: ");
-                    //foreach (Category c in categories)
-                    //{
-                    //    Console.WriteLine("{0}. - {1}", c.id, c.Name);
-                    //}
                     break;
                 }
             }
