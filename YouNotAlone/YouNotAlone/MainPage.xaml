@@ -8,12 +8,36 @@
     
 
     <StackLayout>
-        <flv:FlowListView x:Name="ListPanel">
-            
-        </flv:FlowListView>
+        <!--<flv:FlowListView x:Name="ListPanel" FlowColumnCount="1">
+
+            <flv:FlowListView.FlowColumnTemplate>
+                <DataTemplate>
+                    <Label Text="{Binding Name}"/>
+                </DataTemplate>
+            </flv:FlowListView.FlowColumnTemplate>
+
+        </flv:FlowListView>-->
+        <!--<FlexLayout AlignItems="Center">
+            <Label Text="1" />
+            <Label Text="2" />
+            <Label Text="3" />
+        </FlexLayout>-->
+        
+        <!--<flv:FlowListView x:Name="ListPanel">
+            <flv:FlowListView.FlowColumnTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <Label Text="{Binding Name}" />
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </flv:FlowListView.FlowColumnTemplate>
+        </flv:FlowListView>-->
+        
         <!-- Place new controls here -->
-        <!--<ListView x:Name="ListPanel" HorizontalOptions="Center">
-            --><!-- https://metanit.com/sharp/xamarin/4.8.php */--><!--
+        <!--<ListView x:Name="ListPanel" >
+             --><!--https://metanit.com/sharp/xamarin/4.8.php */--><!--
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>

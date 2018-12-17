@@ -11,7 +11,7 @@ namespace YouNotAlone
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new MainPage());//new MainPage();
         }
 
         protected override void OnStart()
