@@ -2,17 +2,28 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:YouNotAlone"
-             x:Class="YouNotAlone.MainPage">
+             x:Class="YouNotAlone.MainPage"
+             xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
+             >
+    
 
     <StackLayout>
+        <flv:FlowListView x:Name="ListPanel">
+            
+        </flv:FlowListView>
         <!-- Place new controls here -->
-        <ListView x:Name="ListPanel">
+        <!--<ListView x:Name="ListPanel" HorizontalOptions="Center">
+            --><!-- https://metanit.com/sharp/xamarin/4.8.php */--><!--
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <Label Text="{Binding Name}" />
+                    <ViewCell>
+                        <ViewCell.View>
+                            <Label Text="{Binding Name}" />
+                        </ViewCell.View>
+                    </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
-        </ListView>
+        </ListView>-->
         <!--<Label Text="Welcome to Xamarin.Forms!" 
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />-->

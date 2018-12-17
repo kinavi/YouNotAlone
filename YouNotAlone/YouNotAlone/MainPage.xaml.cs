@@ -13,11 +13,9 @@ namespace YouNotAlone
 
     public partial class MainPage : ContentPage
     {
-        //0.tcp.ngrok.io:15407
-        const int port = 15407;
+        //0.tcp.ngrok.io:17196
+        const int port = 17196;
         const string address = "0.tcp.ngrok.io";
-
-        
 
         private List<Category> categories = new List<Category>();
 
@@ -25,12 +23,12 @@ namespace YouNotAlone
         {
             InitializeComponent();
 
-            categories.Add(new Category { id = 1, Name = "One1" });
-            categories.Add(new Category { id = 2, Name = "Two2" });
+            //categories.Add(new Category { id = 1, Name = "One1" });
+            //categories.Add(new Category { id = 2, Name = "Two2" });
 
-            ListPanel.ItemsSource = categories;
+            //ListPanel.ItemsSource = categories;
 
-            //GetConnect();
+            GetConnect();
         }
 
         async Task GetConnect()
