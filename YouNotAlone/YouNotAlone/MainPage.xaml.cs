@@ -30,6 +30,14 @@ namespace YouNotAlone
 
         public MainPage()
         {
+            InitializeComponent();
+            //this.BindingContext = new ViewModel.PhoneViewModel
+            //{
+            //    Title = "iPhone 7",
+            //    Company = "Apple",
+            //    Price = 52000
+            //};
+
             #region oldVer
             //FlowListView.Init();
             //InitializeComponent();
@@ -117,29 +125,29 @@ namespace YouNotAlone
         #endregion
 
         #region oldVer
-        async Task GetConnect()
-        {
-            TcpClient client = null;
+        //async Task GetConnect()
+        //{
+        //    TcpClient client = null;
 
-            client = new TcpClient(address, port);
-            NetworkStream stream = client.GetStream();
-            BinaryFormatter formatter = new BinaryFormatter();
-            ClinetMessage messenge;
+        //    client = new TcpClient(address, port);
+        //    NetworkStream stream = client.GetStream();
+        //    BinaryFormatter formatter = new BinaryFormatter();
+        //    ClinetMessage messenge;
 
-            messenge = new ClinetMessage(TypeMasseng.GetCategories);
-            formatter.Serialize(stream, messenge);
+        //    messenge = new ClinetMessage(TypeMasseng.GetCategories);
+        //    formatter.Serialize(stream, messenge);
 
-            while (true)
-            {
-                if (stream.DataAvailable)
-                {
-                    categories = (List<Category>)formatter.Deserialize(stream);
-                    break;
-                }
-            }
+        //    while (true)
+        //    {
+        //        if (stream.DataAvailable)
+        //        {
+        //            categories = (List<Category>)formatter.Deserialize(stream);
+        //            break;
+        //        }
+        //    }
 
-            //ListPanel.ItemsSource = categories;
-        }
+        //    //ListPanel.ItemsSource = categories;
+        //}
         #endregion
     }
 }

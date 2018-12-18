@@ -48,7 +48,7 @@ namespace YouNotAlone.Page
             await Navigation.PopAsync();
 
             NavigationPage navPage = (NavigationPage)App.Current.MainPage;
-            ((MainPage)navPage.CurrentPage).DisplayStack();
+            //((MainPage)navPage.CurrentPage).DisplayStack(); - пример 2
         }
     }
 }

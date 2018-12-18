@@ -1,6 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using YouNotAlone.Views;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace YouNotAlone
@@ -11,7 +12,7 @@ namespace YouNotAlone
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new MainPage());//new MainPage();
+            MainPage = new NavigationPage(new CategoryListPage());//new MainPage();//
         }
 
         protected override void OnStart()
