@@ -15,6 +15,7 @@ namespace YouNotAlone.Views
 		public CategoryListPage ()
 		{
 			InitializeComponent ();
+
             BindingContext = new CategoryListViewModel() { Navigation = this.Navigation };
         }
 	}

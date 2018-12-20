@@ -8,13 +8,14 @@ using MyTCPLib;
 using System.Threading.Tasks;
 using System.Net.Sockets;
 using System.Runtime.Serialization.Formatters.Binary;
+using Xamvvm;
 
 namespace YouNotAlone.ViewModels
 {
     class CategoryListViewModel : INotifyPropertyChanged
     {
         //0.tcp.ngrok.io:17196
-        const int port = 17516;
+        const int port = 15436;
         const string address = "0.tcp.ngrok.io";
 
         public ObservableCollection<Category> Categories { get; set; }

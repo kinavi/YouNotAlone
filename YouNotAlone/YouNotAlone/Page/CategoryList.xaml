@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="YouNotAlone.Page.CategoryList"
+             xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
+             >
+    <ContentPage.Content>
+        <StackLayout>
+            <!--<ListView x:Name="ListPanel" ItemsSource="{Binding Categories}">
+                --><!--https://metanit.com/sharp/xamarin/4.8.php */--><!--
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <Label Text="{Binding Name}" />
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>-->
+            <flv:FlowListView x:Name="flowListView" FlowColumnCount="{Binding ColumnCount}" SeparatorVisibility="Default" HasUnevenRows="false"
+			FlowItemsSource="{Binding Categories}" FlowTappedBackgroundColor="Red" FlowTappedBackgroundDelay="250" >
+
+                <flv:FlowListView.FlowLoadingTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Label
+							HorizontalTextAlignment="Center"
+							VerticalTextAlignment="Center"
+							TextColor="Black"
+							Text="Loading..."
+						></Label>
+                        </ViewCell>
+                    </DataTemplate>
+                </flv:FlowListView.FlowLoadingTemplate>
+
+                <flv:FlowListView.FlowColumnTemplate>
+                    <DataTemplate>
+                        <Label HorizontalOptions="Fill" VerticalOptions="Fill" 
+						XAlign="Center" YAlign="Center" Text="{Binding Name}"/>
+                    </DataTemplate>
+                </flv:FlowListView.FlowColumnTemplate>
+
+            </flv:FlowListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
